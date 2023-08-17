@@ -36,6 +36,16 @@ include examples of customizing the output format.
 >
 {:.important}
 
+## index
+
+`index` permits special characters in keys.
+
+{% raw %}
+```console
+$ docker inspect --format='{{index . "NetworkSettings" "Networks" "my-network" "IPAddress"}}' container
+```
+{% endraw %}
+
 ## join
 
 `join` concatenates a list of strings to create a single string.
